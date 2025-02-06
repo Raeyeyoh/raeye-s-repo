@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="thank-you-container">
+    <img src="img/mobilethingy.png" alt="mobile image" class="thank-you-image">
+    
+    <p class="rating-text">You selected <span id="ratingValue"></span> out of 5</p>
+
+    <h1>Thank you!</h1>
+    <p class="message-text">We appreciate you taking the time to give a rating. <br>
+       If you ever need more support, don’t hesitate to <br> 
+       <span >get in touch!</span>
+    </p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const rating = localStorage.getItem("selectedRating");
+        if (rating) {
+            document.getElementById("ratingValue").textContent = rating;
+        }
+    });
+  </script>
+</body>
+</html>
